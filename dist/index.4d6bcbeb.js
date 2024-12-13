@@ -633,6 +633,40 @@ var _uiJs = require("./modules/ui.js");
         searchInput.value = "";
     });
 })();
+const themeToggleButton = document.getElementById("themeToggle");
+const themeIcon = document.getElementById("themeIcon");
+const body = document.body;
+function applyTheme(theme) {
+    if (theme === "dark") {
+        body.classList.add("dark");
+        themeIcon.textContent = "\uD83C\uDF19";
+        localStorage.setItem("theme", "dark");
+    } else {
+        body.classList.remove("dark");
+        themeIcon.textContent = "\u2600\uFE0F";
+        localStorage.setItem("theme", "light");
+    }
+}
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme) applyTheme(savedTheme);
+else applyTheme("light");
+themeToggleButton.addEventListener("click", ()=>{
+    const currentTheme = localStorage.getItem("theme");
+    if (currentTheme === "dark") applyTheme("light");
+    else applyTheme("dark");
+});
+window.addEventListener("scroll", ()=>{
+    const scrollPosition = window.scrollY;
+    console.log("Saved Scroll:", scrollPosition);
+    localStorage.setItem("scrollPosition", scrollPosition);
+});
+window.addEventListener("load", ()=>{
+    const savedScrollPosition = localStorage.getItem("scrollPosition");
+    console.log("Saved Scroll:", savedScrollPosition);
+    if (savedScrollPosition !== null) setTimeout(()=>{
+        window.scrollTo(0, parseInt(savedScrollPosition, 10));
+    }, 100);
+});
 
 },{"./modules/network.js":"2ZPcJ","./modules/ui.js":"lFOPJ"}],"2ZPcJ":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
