@@ -1,11 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/index.1568f793.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <title>Document</title>
   </head>
   <body>
-    <h1 class="text-3xl font-bold underline">Hello world!</h1>
-  <script src="/movie-react.59712999.js"></script></body>
+    <main class="bg-black">
+      <section class="relative">
+        <img src="/card-img%201.7a0aee95.png" class="w-screen" alt="">
+        <form id="searchForm" class="absolute top-2/3 left-1/2 transform -translate-x-1/2">
+          <input type="text" id="searchInput" placeholder="Search movies..." class="w-[500px] px-4 py-2 rounded-lg focus:outline-none">
+        </form>
+      </section>
+      <h1 id="cardsHeader" class="text-white py-12 px-32 text-3xl">
+        Popular movies
+      </h1>
+      <section id="cards" class="flex flex-wrap justify-center gap-4 pb-56"></section>
+    </main>
+    <footer class="bg-neutral-950 text-white py-8">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+          <div>
+            <h3 class="text-lg text-pink-500 font-semibold mb-4">Profile</h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:text-gray-400">FAQ’s</a></li>
+              <li><a href="#" class="hover:text-gray-400">Pricing plans</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg text-pink-500 font-semibold mb-4">
+              Recent Posts
+            </h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="hover:text-gray-400">Touch of uniqueness</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-gray-400">Offices you won’t forget</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg text-pink-500 font-semibold mb-4">Customer</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="hover:text-gray-400">Help & contact us</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg text-pink-500 font-semibold mb-4">Contact</h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:text-gray-400">Contact us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-end mr-4">
+        <p class="text-sm text-gray-400">
+          © 2024 Movie Library. All rights reserved.
+        </p>
+      </div>
+    </footer>
+    <script src="/index.4d6bcbeb.js" defer=""></script>
+  </body>
 </html>
